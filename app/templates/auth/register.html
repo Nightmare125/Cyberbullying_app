@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block extra_css %}
+  <link rel="stylesheet" href="/static/css/auth.css">
+{% endblock %}
+{% block extra_js %}
+  <script src="/static/js/auth.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+  <h2>Register</h2>
+  <form id="register-form">
+    <input type="text" placeholder="Username" name="username">
+    <input type="email" placeholder="Email" name="email">
+    <input type="password" placeholder="Password" name="password">
+    <button type="submit">Register</button>
+
+    <div style="display: flex; align-items: center; justify-content: center; margin-top: 12px;">
+      <label for="register-is-admin" style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+        <input 
+          type="checkbox" 
+          id="register-is-admin" 
+          name="register-is-admin" 
+          style="transform: translateY(9px);" 
+        />
+        Admin
+      </label>
+    </div>
+    
+  </form>
+</div>
+{% endblock %}

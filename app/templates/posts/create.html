@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}New Post{% endblock %}
+{% block extra_js %}<script src="/static/js/post.js"></script>{% endblock %}
+
+{% block content %}
+<h2>Create a Post</h2>
+<form id="post-form">
+  <textarea name="content" placeholder="What's on your mind?"></textarea>
+  <button type="submit">Post</button>
+</form>
+<div id="post-feedback"></div>
+{% endblock %}

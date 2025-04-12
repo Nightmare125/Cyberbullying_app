@@ -1,0 +1,17 @@
+<!-- templates/auth/login.html -->
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="/static/css/auth.css">{% endblock %}
+{% block extra_js %}<script src="/static/js/auth.js"></script>{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+  <h2>Login</h2>
+  <form id="login-form">
+    <input type="text" placeholder="Username or Email" name="credential" required />
+    <input type="password" placeholder="Password" name="password" required />
+    <button type="submit">Login</button>
+  </form>
+  <div id="login-feedback"></div>
+</div>
+{% endblock %}
